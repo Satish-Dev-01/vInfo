@@ -109,3 +109,4 @@ For detailed architectural principles, memory management strategies, caching lay
 
 ## 📄 License
 Private / Proprietary.
+# vInfo
