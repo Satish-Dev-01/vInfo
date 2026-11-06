@@ -1,26 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF7F2;
+  --foreground: #14281F;
+  --surface: #FFFFFF;
+  --surface-muted: #EBE6DC;
+  --primary: #1D5943;
+  --primary-hover: #164836;
+  --primary-light: #EAF3EE;
+  --accent: #52E098;
+  --border: #EAE2D4;
+  --brand-paper: #FAF6EF;
+  --brand-ink: #29251F;
+  --brand-muted: #726A5D;
+  --brand-faint: #9A9184;
+  --brand-ochre: #C98A3A;
+  --brand-teal: #1F6E5B;
+  --brand-teal-ink: #124A3D;
+  --brand-teal-tint: #E6EFE9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: #1D5943;
+  --color-primary-hover: #164836;
+  --color-forest-950: #0C1E16;
+  --color-forest-900: #11281E;
+  --color-forest-800: #1D5943;
+  --color-forest-700: #256E54;
+  --color-forest-100: #EAF3EE;
+  --color-forest-50: #F4F8F5;
+  --color-mint-400: #52E098;
+  --color-cream-100: #FAF7F2;
+  --color-cream-200: #EBE6DC;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #11281E;
+    --foreground: #FAF7F2;
+    --surface: #173428;
+    --surface-muted: #1E4233;
+    --primary: #52E098;
+    --primary-hover: #45C785;
+    --primary-light: #1A392C;
+    --accent: #52E098;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Custom subtle scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #FAF8F5;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #D8CEBE;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1F6E5B;
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #D8CEBE #FAF8F5;
 }
